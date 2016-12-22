@@ -2,11 +2,18 @@
   background-color: $nav-background;
 }
 .top-bar{
-  .menu-text{
-    color:$nav-text;
-    a{
-      display: inline;
-      padding:0;
+  .menu {
+    .active-link{
+        font-weight: bold;
+        background-color: $nav-active-link-background;
+        color: $nav-active-link-color;
+    }
+    .menu-text{
+      color:$nav-text;
+      a{
+        display: inline;
+        padding:0;
+      }
     }
   }
 }
