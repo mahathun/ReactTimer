@@ -3,8 +3,14 @@ $grey:#333333;
 $light-grey: #666666;
 $white:#fff;
 $light-yellow: #dce2aa;
-//Navigation colors
+
+//Navigation
 $nav-background: $grey;
 $nav-text: $white;
 $nav-active-link-background: $light-grey;
 $nav-active-link-color: $light-yellow;
+
+//Clock variables
+$clock-bg-color: rgba(#1cbecf, 0.6);
+$clock-border-color : #0021ff;
+$clock-text-color : white;
