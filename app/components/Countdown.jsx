@@ -26,12 +26,17 @@ var Countdown = React.createClass({
       }
     }
   },
+  componentWillUnmount:function(){
+    clearInterval(this.timer);
+    this.timer = undefined;
+  },
   startTimer: function(){
     this.timer = setInterval(()=>{
+      var newCount = this.state.count-1;
       this.setState({
-        count:this.state.count>0?this.state.count-1: 0
+        count:newCount>=0?newCount-1: 0
       })
-      if(this.state.count <= 0){
+      if(newCount <= 0){
         this.setState({countdownStatus:'stopped'});
       }
     },1000);
@@ -58,7 +63,6 @@ var Countdown = React.createClass({
 
     return (
       <div>
-        Countdown
         <Clock totalSec={count} />
         {renderControlArea()}
 

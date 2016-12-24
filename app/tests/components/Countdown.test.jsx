@@ -35,5 +35,20 @@ describe('Countdown',()=>{
         done();
       },3000);
     });
+
+    it('should pause countdown on paused status',(done)=>{
+      var countdown = TestUtils.renderIntoDocument(<Countdown />);
+
+      countdown.handleSetCountdown(3);
+      countdown.handleStatusChange('paused');
+
+      setTimeout(()=>{
+        var count = countdown.state.count;
+        expect(count).toBe(3);
+        done();
+      }, 3000);
+
+    });
+
   });
 });

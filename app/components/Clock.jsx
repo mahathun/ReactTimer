@@ -3,9 +3,9 @@ var React = require('react');
 var Clock = React.createClass({
 
   getDefaultProps:function(){
-      //return {
+      return {
         totalSec: 0
-      //}
+      }
   },
   formatSeconds:function(totalSec){
 
