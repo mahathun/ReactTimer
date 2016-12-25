@@ -2,3 +2,14 @@
 @import "components/nav";
 @import "components/clock";
 @import "components/controls";
+
+
+.page-title{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem auto;
+  color:rgb(100, 101, 149)
+  // text-align: center;
+}
